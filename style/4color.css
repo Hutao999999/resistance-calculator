@@ -1,0 +1,215 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.board {
+  width: 300px;
+  height: 800px;
+  border-radius: 10px;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  flex-direction: column;
+  position: relative;
+}
+
+.board .heading {
+  position: absolute;
+  top: 20px;
+  font-size: 40px;
+  color: rgb(20, 20, 20);
+}
+
+.board .color1,
+.board .color2,
+.board .color3,
+.board .color4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.board .color1 {
+  margin-top: -100px;
+}
+
+.board .color2,
+.board .color3,
+.board .color4 {
+  margin-top: 50px;
+}
+
+.board .color1 .title,
+.board .color2 .title,
+.board .color3 .title,
+.board .color4 .title {
+  font-size: 40px;
+}
+
+.board .color1 .colors,
+.board .color2 .colors {
+  height: 50px;
+  font-size: 30px;
+  width: 200%;
+  background-color: rgb(220, 220, 220);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.board .color3 .colors,
+.board .color4 .colors {
+  height: 50px;
+  font-size: 30px;
+  width: 100%;
+  background-color: rgb(220, 220, 220);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.board .color4 .colors {
+  height: 50px;
+  font-size: 30px;
+  width: 120%;
+  background-color: rgb(220, 220, 220);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.board .color1 .colors:has(option:checked[value="0"]),
+.board .color2 .colors:has(option:checked[value="0"]),
+.board .color3 .colors:has(option:checked[value="0"]) {
+  color: rgb(0, 0, 0);
+}
+
+.board .color1 .colors:has(option:checked[value="1"]),
+.board .color2 .colors:has(option:checked[value="1"]),
+.board .color3 .colors:has(option:checked[value="1"]),
+.board .color4 .colors:has(option:checked[value="1"]) {
+  color: rgb(80, 50, 10);
+}
+
+.board .color1 .colors:has(option:checked[value="2"]),
+.board .color2 .colors:has(option:checked[value="2"]),
+.board .color3 .colors:has(option:checked[value="2"]),
+.board .color4 .colors:has(option:checked[value="2"]) {
+  color: rgb(255, 0, 0);
+}
+
+.board .color1 .colors:has(option:checked[value="3"]),
+.board .color2 .colors:has(option:checked[value="3"]),
+.board .color3 .colors:has(option:checked[value="3"]) {
+  color: rgb(255, 100, 0);
+}
+
+.board .color1 .colors:has(option:checked[value="4"]),
+.board .color2 .colors:has(option:checked[value="4"]),
+.board .color3 .colors:has(option:checked[value="4"]) {
+  color: rgb(255, 255, 0);
+}
+
+.board .color1 .colors:has(option:checked[value="5"]),
+.board .color2 .colors:has(option:checked[value="5"]),
+.board .color3 .colors:has(option:checked[value="5"]),
+.board .color4 .colors:has(option:checked[value="5"]) {
+  color: rgb(0, 255, 0);
+}
+
+.board .color1 .colors:has(option:checked[value="6"]),
+.board .color2 .colors:has(option:checked[value="6"]),
+.board .color3 .colors:has(option:checked[value="6"]),
+.board .color4 .colors:has(option:checked[value="6"]) {
+  color: rgb(0, 100, 255);
+}
+
+.board .color1 .colors:has(option:checked[value="7"]),
+.board .color2 .colors:has(option:checked[value="7"]),
+.board .color3 .colors:has(option:checked[value="7"]),
+.board .color4 .colors:has(option:checked[value="7"]) {
+  color: rgb(100, 0, 255);
+}
+
+.board .color1 .colors:has(option:checked[value="8"]),
+.board .color2 .colors:has(option:checked[value="8"]),
+.board .color3 .colors:has(option:checked[value="8"]) {
+  color: rgb(100, 100, 100);
+}
+
+.board .color1 .colors:has(option:checked[value="9"]),
+.board .color2 .colors:has(option:checked[value="9"]),
+.board .color3 .colors:has(option:checked[value="9"]) {
+  color: rgb(255, 255, 255);
+}
+
+.board .color3 .colors:has(option:checked[value="-1"]),
+.board .color4 .colors:has(option:checked[value="-1"]) {
+  color: rgb(255, 215, 0);
+}
+
+.board .color3 .colors:has(option:checked[value="-2"]),
+.board .color4 .colors:has(option:checked[value="-2"]) {
+  color: rgb(192, 192, 192);
+}
+
+.board .color4 .colors:has(option:checked[value="-3"]) {
+  color: rgb(200, 200, 200);
+}
+
+#calculate {
+  width: 100%;
+  height: 40px;
+  bottom: 20px;
+  position: absolute;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgb(0, 0, 255);
+  border-radius: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#calculate:hover {
+  background-color: rgb(0, 0, 2552);
+  color: white;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.result {
+  position: absolute;
+  bottom: 80px;
+  font-size: 30px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.result.calculated {
+  opacity: 1;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: blue;
+  font-size: 30px;
+  margin-top: 30px;
+}
